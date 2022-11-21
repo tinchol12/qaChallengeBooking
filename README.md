@@ -23,6 +23,7 @@ In order to acomplish the challenge, the steps i followed were:
     5- Created the test case with the data provided. 
         - The test case is located in the file "testbooking.spec.js".
         - The site as soon it opens, request for accept or not the cookies. I have to validate if the request is displayed and if it is, it will accept it, if not, it will continue with the test.
+        - I had to create functions that set the dates for everymonth in order to avoid that the test case expires after a month. This functions are located in the file "landingPage.js".
         - I also configured the test run with retries in case of failure, because the site is a little bit slow sometimes and it could fail.        
     6- Executed the test case and checked the results (npx cypress open)
     7- Create a new branch and push the changes to the repository.
