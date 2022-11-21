@@ -16,15 +16,15 @@ Create an automated test project that takes the following steps
 In order to acomplish the challenge, the steps i followed were:
 
     1- Created a new repository in github and cloned it in my local machine.
-    2- Installed cypress and created a new project. (npm install cypress --save-dev).
+    2- Installed cypress and created a new project. (npm install cypress --save-dev). It will be requiered to have installed nodejs previously.
         In this case, i'm using the last version of Cypress released till today.
-    3- Created a new folder called "integrations" and inside it, created a new file called "testbooking.spec.js" where are located the test that have been requested.
-    4- Created the page object model for the landing page and the search page (bookingPage.js and searchPage.js).
+    3- Created a new folder called "integrations" and inside, created a new file called "testbooking.cy.js" where is located the test that have been requested.
+    4- Created the page object model for the landing page and the search page (landingPage.js and resultsPage.js).
     5- Created the test case with the data provided. 
-        - The test case is located in the file "testbooking.spec.js".
+        - The test case is located in the file "testbooking.cy.js".
         - The site as soon it opens, request for accept or not the cookies. I have to validate if the request is displayed and if it is, it will accept it, if not, it will continue with the test.
         - I also configured the test run with retries in case of failure, because the site is a little bit slow sometimes and it could fail.        
-    6- Executed the test case and checked the results (npx cypress open)
+    6- Executed the test case and checked the results
     7- Create a new branch and push the changes to the repository.
     8- Create a pull request to the master branch.
     9- Merge the pull request to the master branch.
@@ -34,7 +34,7 @@ How to run the test?
         1- Clone the repository.
         2- Install cypress (npm install cypress --save-dev).
         3- Execute the test (npx cypress open).
-        4- Select the test case (testbooking.spec.js).
+        4- Select the test case (testbooking.cy.js).
         5- Check the results.
 
 ##  Test results
