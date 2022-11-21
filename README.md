@@ -16,15 +16,20 @@ Create an automated test project that takes the following steps
 In order to acomplish the challenge, the steps i followed were:
 
     1- Created a new repository in github and cloned it in my local machine.
-    2- Installed cypress and created a new project. (npm install cypress --save-dev). It will be requiered to have installed nodejs previously.
+    2- Installed cypress and created a new project. (npm install cypress --save-dev).
         In this case, i'm using the last version of Cypress released till today.
-    3- Created a new folder called "integrations" and inside, created a new file called "testbooking.cy.js" where is located the test that have been requested.
-    4- Created the page object model for the landing page and the search page (landingPage.js and resultsPage.js).
+    3- Created a new folder called "integrations" and inside it, created a new file called "testbooking.spec.js" 
+       where are located the test that have been requested.
+    4- Created the page object model for the landing page and the search page (bookingPage.js and searchPage.js).
     5- Created the test case with the data provided. 
-        - The test case is located in the file "testbooking.cy.js".
-        - The site as soon it opens, request for accept or not the cookies. I have to validate if the request is displayed and if it is, it will accept it, if not, it will continue with the test.
-        - I also configured the test run with retries in case of failure, because the site is a little bit slow sometimes and it could fail.        
-    6- Executed the test case and checked the results
+        - The test case is located in the file "testbooking.spec.js".
+        - The site as soon it opens, request for accept or not the cookies. I have to validate if the request is
+          displayed and if it is, it will accept it, if not, it will continue with the test.
+        - I had to create functions that set the dates for everymonth in order to avoid that the test case 
+          expires after a month. This functions are located in the file "landingPage.js".
+        - I also configured the test run with retries in case of failure, because the site is a little bit
+          slow sometimes and it could fail.        
+    6- Executed the test case and checked the results (npx cypress open)
     7- Create a new branch and push the changes to the repository.
     8- Create a pull request to the master branch.
     9- Merge the pull request to the master branch.
