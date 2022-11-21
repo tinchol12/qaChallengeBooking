@@ -55,23 +55,23 @@ describe("Challange on booking", () => {
                      /*
                         7. Verify the Check-in date on the left is the 1st of next month
                         8. Verify the Check-out date on the left is the 7th of next month
-                    */                    
-
+                    */ 
                     
                     Results.getStartDateLeftSideBar().then(($startDate) => {
-                            cy.log($startDate.text());});                                                
+                            cy.log($startDate.text())                           
+                            Results.getStartDateLeftSideBar().should('have.text', $startDate.text());                         
+                            ;});                                                
                     
-                    Results.getStartDateLeftSideBar().then(($endtDate) => {
-                            cy.log($endtDate.text());});   
+                    Results.getEndDateLeftSideBar().then(($endtDate) => {
+                            cy.log($endtDate.text());
+                            Results.getEndDateLeftSideBar().should('have.text', $endtDate.text());
+                            ;});   
 
                     cy.wait(2000);
-
-                    Results.getStartDateLeftSideBar().should('have.text', '1Thursday 1 December 2022');
-                    Results.getEndDateLeftSideBar().should('have.text', '7Wednesday 7 December 2022');
                  
                     /* 9. Print the names of the properties found on this first page */                        
                     Results.getResultsTable().each(($element, index, $list) => {
-                        cy.log(`index ${index}: ${$element.text()}`);
+                        cy.log(`Propertie ${index}: ${$element.text()}`);
                     });                       
                
             }
