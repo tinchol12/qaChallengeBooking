@@ -1,4 +1,4 @@
-# qaChallageBooking
+# qaChallengeBooking
 
 ##  Test case
 
