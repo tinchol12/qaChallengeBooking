@@ -55,6 +55,7 @@ it("Search",{"retries": 2}, () => {
                         cy.get('[data-testid="date-display-field-end"]').should('have.text', '7Wednesday 7 December 2022');
                      
                         /* 9. Print the names of the properties found on this first page */
+                        /*...... */
                    
                 }
             });   
